@@ -1,0 +1,22 @@
+[project]
+name = "sims3-mcp"
+version = "0.1.0"
+description = "MCP server that lets Claude play The Sims 3 through a script mod and a shared-memory mailbox"
+requires-python = ">=3.10"
+dependencies = ["mcp>=1.2"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+sims3-mcp = "sims3_mcp.server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["server"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

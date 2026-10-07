@@ -1,0 +1,7 @@
+.venv/
+.tools/
+build/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.mcp.json
