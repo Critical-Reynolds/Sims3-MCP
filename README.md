@@ -1,4 +1,4 @@
-# 🏠 Sims3-MCP
+# Sims3-MCP
 
 **Let your favorite AI play The Sims 3.**
 
@@ -14,23 +14,23 @@ It was inspired by [pevers/sims-mcp](https://github.com/pevers/sims-mcp) for The
 
 ---
 
-## ✨ What it can do
+## What it can do
 
 | | |
 |---|---|
-| 👀 **Observe** | Time and speed, money, household members, needs, mood and moodlets, skills, traits, career, wishes, relationships, the action queue, open dialogs |
-| 🖱️ **Play** | List nearby objects, see the real pie menu (including greyed-out options and why), queue actions, cancel them, walk somewhere, travel to other lots, switch Sims |
-| ⏩ **Time** | Pause, normal, fast or ultra. `wait` lets time pass and stops early when a need gets low, a dialog pops up, or the Sim has nothing left to do |
-| 📈 **Stats** | Money, needs, skills, traits, moodlets, lifetime happiness and rewards, relationships, careers (join, promote, quit), aging up |
-| 🛋️ **Buy mode** | Search the catalog, buy objects and place them exactly (position and facing), put things on counters and desks, replace, move or sell them |
-| 🧱 **Build mode** | Drive the game's own build tools: walls, floor paint, objects, sledgehammer, wall and floor presets, auto-roof |
-| 💬 **Dialogs** | Read and answer pop-ups and pickers |
-| 🧙 **Cheats** | Any console cheat (`motherlode`, `testingcheatsenabled true`, …), plus saving the game |
-| 🔧 **Escape hatch** | `reflect`: read, change or call anything in the game's C# code by name |
+| **Observe** | Time and speed, money, household members, needs, mood and moodlets, skills, traits, career, wishes, relationships, the action queue, open dialogs |
+| **Play** | List nearby objects, see the real pie menu (including greyed-out options and why), queue actions, cancel them, walk somewhere, travel to other lots, switch Sims |
+| **Time** | Pause, normal, fast or ultra. `wait` lets time pass and stops early when a need gets low, a dialog pops up, or the Sim has nothing left to do |
+| **Stats** | Money, needs, skills, traits, moodlets, lifetime happiness and rewards, relationships, careers (join, promote, quit), aging up |
+| **Buy mode** | Search the catalog, buy objects and place them exactly (position and facing), put things on counters and desks, replace, move or sell them |
+| **Build mode** | Drive the game's own build tools: walls, floor paint, objects, sledgehammer, wall and floor presets, auto-roof |
+| **Dialogs** | Read and answer pop-ups and pickers |
+| **Cheats** | Any console cheat (`motherlode`, `testingcheatsenabled true`, …), plus saving the game |
+| **Escape hatch** | `reflect`: read, change or call anything in the game's C# code by name |
 
 ---
 
-## 🧠 How it works (the "mailbox")
+## How it works (the "mailbox")
 
 The Sims 3 has no API that outside programs can talk to, and its mod sandbox blocks network and file access.
 So the two sides talk through a **shared mailbox in the game's memory**:
@@ -58,7 +58,7 @@ the game or load a different save, the server finds the new mailbox by itself.
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 - **Windows**, with **The Sims 3** on patch **1.67 or 1.69** (Steam, EA app, Origin or disc). It works with
   just the base game.
@@ -67,7 +67,7 @@ the game or load a different save, the server finds the new mailbox by itself.
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### 1. Get the code and install the Python server
 
@@ -88,10 +88,10 @@ The mod is compiled against **your own copy** of the game, so no EA files are sh
 .venv\Scripts\python tools\install_mod.py     # copies it into Documents\Electronic Arts\The Sims 3\Mods
 ```
 
-> 💡 If your game isn't in `C:\Program Files\EA Games\The Sims 3`, run
+> **Tip:** If your game isn't in `C:\Program Files\EA Games\The Sims 3`, run
 > `tools\extract_refs.py --game "D:\Path\To\The Sims 3"`.
 >
-> 💡 You need to have started the game at least once, so its Documents folder exists.
+> **Tip:** You need to have started the game at least once, so its Documents folder exists.
 
 ### 3. Clear the script cache (important!)
 
@@ -106,11 +106,11 @@ update the mod.
 
 ### 4. Start the game
 
-Load a save. After a few seconds you should see the notification **"Sims3MCP 0.1.0 connected"** 🎉
+Load a save. After a few seconds you should see the notification **"Sims3MCP 0.1.0 connected"**.
 
 ---
 
-## 🤖 Add it to your favorite AI
+## Add it to your favorite AI
 
 In every case the server is just this command:
 
@@ -167,7 +167,7 @@ Any MCP client that supports **stdio** servers works. Point it at the command ab
 
 ---
 
-## 💬 Things to try
+## Things to try
 
 - *"Look at my household and tell me what everyone needs."*
 - *"My Sim is hungry. Make her something from the fridge, then let time run until she's done."*
@@ -181,7 +181,7 @@ The AI is told to change your game **only when you ask**. Still, **back up your 
 
 ---
 
-## 🧰 Tool list
+## Tool list
 
 | Area | Tools |
 |---|---|
@@ -208,7 +208,7 @@ Targets for `list_interactions` / `do_interaction` can be:
 
 ---
 
-## 🩺 Troubleshooting
+## Troubleshooting
 
 | Problem | Fix |
 |---|---|
@@ -219,7 +219,7 @@ Targets for `list_interactions` / `do_interaction` can be:
 
 ---
 
-## 🛠️ Development
+## Development
 
 - `python -m sims3_mcp.cli look`: send one raw command to the mod and print the JSON.
 - `pip install -e .[dev]` then `pytest`: unit tests for the package format and the mailbox protocol (uses a
@@ -241,7 +241,7 @@ Targets for `list_interactions` / `do_interaction` can be:
 
 ---
 
-## ⚖️ License & disclaimer
+## License & disclaimer
 
 MIT. See [LICENSE](LICENSE).
 
