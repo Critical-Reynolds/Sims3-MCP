@@ -658,9 +658,11 @@ namespace Sims3Mcp
             IDictionary registry = reg.GetValue(null) as IDictionary;
             if (registry == null) return list;
             uint root = Handle(modal);
-            foreach (DictionaryEntry de in registry)
+            // Snapshot first: touching windows below can register handlers and invalidate the enumerator.
+            List<object> entries = new List<object>();
+            foreach (object v in registry.Values) entries.Add(v);
+            foreach (object data in entries)
             {
-                object data = de.Value;
                 if (data == null) continue;
                 Type dt = data.GetType();
                 WindowBase win = dt.GetField("Window").GetValue(data) as WindowBase;
